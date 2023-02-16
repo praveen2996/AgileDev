@@ -48,17 +48,13 @@
   <body>
     <div class="form-container">
       <div class="upload-form-container">
-        <form id="file-form" action="/success" method="post" enctype="multipart/form-data">
-          <h3>Upload Dataset</h3>
-          <p>Select a file to upload:</p>
-          <input type="file" id="file-input-dataset" name="file-dataset" required>
-          <br>
-          <h3>Upload Rules</h3>
-          <p>Select a file to upload:</p>
-          <input type="file" id="file-input-rules" name="file-rules" required>
-          <br>
-          <input type="submit" value="Submit">
-        </form>
+        <p>{{ message }}</p>
+        <ul>
+          {% for column_name in column_names %}
+          <li>{{ column_name }}</li>
+          {% endfor %}
+        </ul>
+
       </div>
     </div>
   </body>
